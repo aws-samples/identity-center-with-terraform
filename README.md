@@ -1,6 +1,6 @@
 # identity-center-with-terraform
 
-Manage [AWS IAM Identity Center permission sets and account assignments with Terraform.
+Manage AWS IAM Identity Center permission sets and account assignments with Terraform.
 
 ## Prerequisites
 
