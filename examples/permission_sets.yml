@@ -1,0 +1,29 @@
+Admin: #permission set name
+  description: null
+  tags: null
+  session_duration: "PT8H"
+  inline_policy: null
+  aws_managed_policies:
+    - "arn:aws:iam::aws:policy/AdministratorAccess"
+  customer_managed_policies: null
+  permissions_boundary: null
+ReadOnly:
+  description: "Read-only role, check policy for exact details"
+  tags: null
+  session_duration: null
+  inline_policy: "ReadOnly"
+  aws_managed_policies: null
+  customer_managed_policies: null
+  permissions_boundary:
+    customer_managed_policy: "TestPermissionsBoundary"
+SecurityAdmin:
+  description: "Security admin role"
+  tags: null
+  session_duration: null
+  inline_policy: null
+  aws_managed_policies: null
+  customer_managed_policies: 
+    - "SecurityAdmin" 
+  permissions_boundary:
+    aws_managed_policy: "arn:aws:iam::aws:policy/ReadOnlyAccess"
+

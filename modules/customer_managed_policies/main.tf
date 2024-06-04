@@ -1,0 +1,10 @@
+resource "aws_ssoadmin_customer_managed_policy_attachment" "this" {
+  for_each           = toset(var.name)
+  instance_arn       = var.instance_arn
+  permission_set_arn = var.permission_set_arn
+  customer_managed_policy_reference {
+    name = each.key
+    path = "/"
+  }
+}
+
