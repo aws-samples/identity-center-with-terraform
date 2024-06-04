@@ -1,6 +1,6 @@
 # identity-center-with-terraform
 
-Manage AWS IAM Identity Center permission sets and account assignments with Terraform.
+Manage [AWS IAM Identity Center permission sets and account assignments with Terraform.
 
 ## Prerequisites
 
@@ -37,6 +37,10 @@ We have deliberately segregated the two patterns:
 - You may be planning to use an external IdP and want to build a pattern that can be de-coupled in the future
 - At scale, any explicit or implicit dependencies (`depends_on`) between account assignments and group membership can have unintended consequences.
   - Example: with a dependency, adding a user to a group can cause terraform to refresh all account assignments that feature that group (into the 100s or 1000s depending on the scale of your AWS Organization).
+
+## Delegation
+
+This pattern can be used with [delegated administration](https://docs.aws.amazon.com/singlesignon/latest/userguide/delegated-admin.html) in Identity Center. Separate instances of the pattern would need to be deployed to the management account and delegated account. 
 
 ## Related Resources 
 
