@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
 ReadOnlyLZ: #assignment identifier, this must be unique
   principal: Admin
   principal_type: Group

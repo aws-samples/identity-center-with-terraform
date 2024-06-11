@@ -1,3 +1,6 @@
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: MIT-0
+
 data "aws_ssoadmin_instances" "this" {}
 
 resource "aws_ssoadmin_permission_set" "this" {

@@ -1,3 +1,6 @@
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: MIT-0
+
 resource "aws_ssoadmin_permissions_boundary_attachment" "managed" {
   count              = local.permissions_boundary_type == "aws_managed_policy" ? 1 : 0
   instance_arn       = var.instance_arn
