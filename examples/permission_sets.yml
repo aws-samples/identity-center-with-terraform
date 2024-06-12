@@ -7,7 +7,7 @@ Admin: #permission set name
   session_duration: "PT8H"
   inline_policy: null
   aws_managed_policies:
-    - "arn:aws:iam::aws:policy/AdministratorAccess"
+    - "AdministratorAccess"
   customer_managed_policies: null
   permissions_boundary: null
 ReadOnly:
