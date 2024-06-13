@@ -9,7 +9,7 @@ Manage AWS IAM Identity Center permission sets and account assignments with Terr
 ## Module Inputs
 ```hcl
 module "idc" {
-  source              = "git@github.com:aws-samples/identity-center-with-terraform.git"
+  source              = "git@github.com:aws-samples/identity-center-with-terraform"
   permission_sets     = "./permission_sets.yml"
   account_assignments = "./account_assignments.yml"
 }
