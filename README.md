@@ -9,7 +9,7 @@ Manage AWS IAM Identity Center permission sets and account assignments with Terr
 ## Module Inputs
 ```hcl
 module "idc" {
-  source              = "git@github.com:aws-samples/identity-center-with-terraform"
+  source              = "github.com/aws-samples/identity-center-with-terraform"
   permission_sets     = "./permission_sets.yml"
   account_assignments = "./account_assignments.yml"
 }
@@ -30,7 +30,7 @@ module "idc" {
 
 This pattern does not setup users and groups. These are typically handled by an external Identity Provider (IdP). 
 
-If you are not using an IdP and want to create groups in Identity Center, use this pattern: INSERT LINK HERE.
+If you are not using an IdP and want to create groups in Identity Center, use this pattern: [idc-users-and-groups-with-terraform](https://github.com/aws-samples/identity-center-users-and-groups-with-terraform).
 
 We have deliberately segregated the two patterns:
 - You may be using an external IdP
