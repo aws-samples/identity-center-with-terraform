@@ -1,8 +1,8 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
 
-variable "permission_set" {
-  type = string
+variable "permission_sets" {
+  type = list(string)
 }
 
 variable "principal" {
