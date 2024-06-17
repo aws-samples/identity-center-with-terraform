@@ -4,7 +4,8 @@
 ReadOnlyLZ: #assignment identifier, this must be unique
   principal: Admin
   principal_type: Group
-  permission_set: ReadOnly 
+  permission_sets: 
+    - ReadOnly 
   account_list: 
     - "112233445566" #Audit
     - "223344556677" #Log Archive
@@ -13,7 +14,9 @@ ReadOnlyLZ: #assignment identifier, this must be unique
 AdminLZ:
   principal: Admin
   principal_type: Group
-  permission_set: Admin
+  permission_sets: 
+    - Admin
+    - ReadOnly 
   account_list: 
     - "112233445566" #Audit
     - "223344556677" #Log Archive
@@ -21,12 +24,14 @@ AdminLZ:
 LogReader:
   principal: Security
   principal_type: Group
-  permission_set: ReadOnly
+  permission_sets: 
+    - ReadOnly
   account_list:
     - "22334455667788" #Log Archive
 ReadOnlyLZUsers:
   principal: UserA
   principal_type: User
-  permission_set: ReadOnly
+  permission_sets: 
+    - ReadOnly
   account_list:
     - "22334455667788" #Log Archive

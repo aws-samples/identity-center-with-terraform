@@ -2,8 +2,9 @@
 // SPDX-License-Identifier: MIT-0
 
 data "aws_ssoadmin_permission_set" "this" {
+  for_each     = toset(var.permission_sets)
   instance_arn = var.instances_arns
-  name         = var.permission_set
+  name         = each.value
 }
 
 data "aws_identitystore_group" "this" {
@@ -31,15 +32,12 @@ data "aws_identitystore_user" "this" {
 }
 
 resource "aws_ssoadmin_account_assignment" "this" {
-  for_each           = toset(var.account_assignment)
+  for_each = { for account_set in local.account_permission_set : "${account_set.account}-${account_set.permission_set}" => account_set }
+
   instance_arn       = var.instances_arns
-  permission_set_arn = data.aws_ssoadmin_permission_set.this.arn
-
-  principal_id   = local.data_source
-  principal_type = local.principal_type_upper
-
-  target_id   = each.value
-  target_type = "AWS_ACCOUNT"
+  permission_set_arn = data.aws_ssoadmin_permission_set.this[each.value.permission_set].arn
+  principal_id       = local.data_source
+  principal_type     = local.principal_type_upper
+  target_id          = each.value.account
+  target_type        = "AWS_ACCOUNT"
 }
-
-
