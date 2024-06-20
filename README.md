@@ -50,6 +50,7 @@ This pattern can be used with [delegated administration](https://docs.aws.amazon
 - [Resource:aws_ssoadmin_permission_set_inline_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssoadmin_permission_set_inline_policy)
 - [Resource:aws_ssoadmin_managed_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssoadmin_managed_policy_attachment)
 - [Resource: aws_ssoadmin_customer_managed_policy_attachment](https://apg-library.amazonaws.com/content-viewer/author/55d67529-de69-4d69-8b82-6efe4f2e7eb4)
+- [Resource: aws_ssoadmin_permissions_boundary_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssoadmin_permissions_boundary_attachment)
 - [Resource: aws_ssoadmin_account_assignment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssoadmin_account_assignment)
 
 ## Security
